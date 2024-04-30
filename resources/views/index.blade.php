@@ -49,7 +49,7 @@
                 <div>
                     <i class="bi bi-person-circle"></i>
                 </div>
-                <p>Faça <a href="login-register/login.html"><strong>LOGIN</strong></a> ou<br> crie seu <a href="login-register/login.html"><strong>CADASTRO</strong></a></p>
+                <p>Faça <a href="{{ route('login') }}"><strong>LOGIN</strong></a> ou<br> crie seu <a href="{{ route('login') }}"><strong>CADASTRO</strong></a></p>
             </div>
             <div class="icons">
                 <nav>
