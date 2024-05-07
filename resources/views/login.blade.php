@@ -5,13 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../assets/imgs/favicon.png" type="image/x-icon">
-    <script type="text/javascript" src="{{ asset('assets/js/login.js') }}"></script>
-    <link href="{{ asset('assets/css/login.css') }}" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
-        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script type="text/javascript" src="{{ asset('assets/js/login.js') }}"></script>
+    <link href="{{ asset('assets/css/login.css') }}" rel="stylesheet">
     <title> | Realize seu login!</title>
 </head>
 <div class="body" id="body">
@@ -42,22 +41,23 @@
                     <button class="dark">Entre</button>
                 </div>
             </form>
-            <form id="register" tabindex="502">
+            <form id="register" method="POST" action="{{ route('register') }}" tabindex="502">
+                @csrf
                 <h3>Registre-se</h3>
                 <div class="name">
-                    <input type="text" name="">
+                    <input type="text" name="name">
                     <label>Nome Completo</label>
                 </div>
                 <div class="mail">
-                    <input type="mail" name="">
+                    <input type="mail" name="email">
                     <label>E-mail</label>
                 </div>
-                <div class="uid">
-                    <input type="text" name="">
-                    <label>Usuário</label>
+                <div class="passwd">
+                    <input type="password" name="password">
+                    <label>Senha</label>
                 </div>
                 <div class="passwd">
-                    <input type="password" name="">
+                    <input type="password" name="password_confirmation">
                     <label>Senha</label>
                 </div>
                 <div class="submit">
